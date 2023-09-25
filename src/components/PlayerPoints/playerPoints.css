@@ -1,0 +1,34 @@
+.blue {
+  height: 50px;
+  width: 50px;
+  background-color: rgb(52, 71, 240);
+  border-radius: 50%;
+  display: inline-block;
+}
+.green {
+  height: 50px;
+  width: 50px;
+  background-color: rgb(28, 142, 8);
+  border-radius: 50%;
+  display: inline-block;
+}
+.red {
+  height: 50px;
+  width: 50px;
+  background-color: rgb(185, 13, 13);
+  border-radius: 50%;
+  display: inline-block;
+}
+.yellow {
+  height: 50px;
+  width: 50px;
+  background-color: rgb(208, 195, 17);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.playersCircles {
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+}

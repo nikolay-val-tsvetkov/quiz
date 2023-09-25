@@ -13,7 +13,7 @@ div {
 }
 
 .question {
-  background-color: #0094da;
+  background-color: #866e04;
   color: white;
   padding: 10px;
   min-height: 60px;
@@ -45,7 +45,7 @@ div {
 .answer {
   width: 48%;
   background: #fff;
-  border: 2px solid #0094da;
+  border: 2px solid #866e04;
   min-height: 70px;
   cursor: pointer;
   margin-bottom: 30px;
@@ -61,7 +61,7 @@ div {
 
 .answer-letter {
   font-size: 30px;
-  background-color: #0084da;
+  background-color: #866e04;
   color: #fff;
   width: 70px;
   display: flex;
@@ -77,32 +77,46 @@ div {
 }
 
 .correct-answer {
-  border: 2px solid #1ea55b;
+  border: 2px solid #096b36;
 }
 
 .correct-answer .answer-letter {
-  background: #1ea55b;
+  background: #096b36;
 }
 
 .wrong-answer {
-  border: 2px solid #dc0a0a;
+  border: 2px solid #ad0404;
 }
 
 .wrong-answer .answer-letter {
-  background: #dc0a0a;
+  background: #ad0404;
 }
 
 .next-button {
   margin: 0 auto;
   color: #fff;
-  background: #0b0e21;
-  width: 300px;
+  background: #866e04;
+  width: 150px;
   font-size: 18px;
   font-weight: 600;
-  padding: 14px 75px;
+  padding: 20px;
   text-transform: uppercase;
   cursor: pointer;
   text-align: center;
+}
+.nextButton-disabled {
+  margin: 0 auto;
+  color: #fff;
+  background: #866e04;
+  width: 150px;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-align: center;
+  pointer-events: none;
+  opacity: 0.5;
 }
 
 .score {

@@ -1,9 +1,15 @@
 import { useContext } from "react";
 import Question from "./Question";
 import { QuizContext } from "../contexts/quiz";
+import PlayerPoints from "./PlayerPoints/PlayerPoints";
 
 const Quiz = () => {
   const [quizState, dispatch] = useContext(QuizContext);
+  const isNextButtonActive = quizState.isNextButtonActive;
+
+  const players = Object.entries(quizState.score);
+  console.log("clement", quizState.score);
+
   return (
     <div className="quiz">
       {quizState.showResults && (
@@ -26,17 +32,26 @@ const Quiz = () => {
       )}
       {!quizState.showResults && (
         <div>
-          <div className="score">
-            Question {quizState.currentQuestionIndex + 1}/
-            {quizState.questions.length}
-          </div>
           <Question />
           <div
-            className="next-button"
+            className={
+              isNextButtonActive ? "next-button" : "nextButton-disabled"
+            }
             onClick={() => dispatch({ type: "NEXT_QUESTION" })}
           >
-            Next question
+            Next
           </div>
+          <div className="playersCircles">
+            {players.map((player, index) => (
+              <PlayerPoints key={index} player={player} />
+            ))}
+          </div>
+          {/* <div className="playersCircles">
+            <span className="playerCircle"></span>
+            <span className="playerCircle"></span>
+            <span className="playerCircle"></span>
+            <span className="playerCircle"></span>
+          </div> */}
         </div>
       )}
     </div>

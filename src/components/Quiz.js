@@ -46,12 +46,6 @@ const Quiz = () => {
               <PlayerPoints key={index} player={player} />
             ))}
           </div>
-          {/* <div className="playersCircles">
-            <span className="playerCircle"></span>
-            <span className="playerCircle"></span>
-            <span className="playerCircle"></span>
-            <span className="playerCircle"></span>
-          </div> */}
         </div>
       )}
     </div>

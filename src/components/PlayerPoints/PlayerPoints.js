@@ -7,5 +7,10 @@ export default function PlayerPoints({ player }) {
 
   // console.log("now", quizState.score[quizState.currentPlayer]);
 
-  return <span className={className}>{player[1]?.points || 0}</span>;
+  return (
+    <div className={`points-circle ${className}`}>
+      <div>{player[1]?.points || 0}</div>
+      <div>{player[1]?.rank}</div>
+    </div>
+  );
 }
